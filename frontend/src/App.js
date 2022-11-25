@@ -1,6 +1,8 @@
 
 //import './App.css';
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Header from "./components/layout/Header";
 import Nav from "./components/layout/Nav";
 import Footer from "./components/layout/Footer";
@@ -12,15 +14,20 @@ import Contacto from "./pages/ContactoPage";
 function App() {
   return (
     <div className="App">
-     <Header></Header>
-     <Nav> </Nav>
-     <Inicio></Inicio>
-<Vapes></Vapes>
-<Noticias></Noticias>
-<Contacto></Contacto>
-     <Footer></Footer>
+     <Header/>
+     <BrowserRouter>
+     <Nav/>
+     <Routes>
 
+<Route path="/" element={<Inicio/>}/>
+<Route path="/" element={<Vapes/>}/>
+<Route path="/" element={<Noticias/>}/>
+<Route path="/" element={<Contacto/>}/>
 
+</Routes>
+
+</BrowserRouter>
+     <Footer/>
 
     </div>
   );
