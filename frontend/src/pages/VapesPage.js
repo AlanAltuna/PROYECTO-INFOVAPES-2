@@ -1,3 +1,5 @@
+import React from "react";
+
 const Vapes = (props) => {
     return (
         <div className="main2">
